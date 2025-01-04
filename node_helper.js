@@ -30,11 +30,11 @@ module.exports = NodeHelper.create({
                 self.returned_data = response.data;
 
                 if (needToTranslate) {
-                    translate(self.returned_data.quoteText, {
+                    translate(self.returned_data.quote, {
                         to: self.language
                     }).then(res => {
                         // console.log(res.text);
-                        self.returned_data.quoteText = res.text;
+                        self.returned_data.quote = res.text;
                         self.sendSocketNotification('QUOTE_RESULT', self.returned_data);
     
                     }).catch(err => {

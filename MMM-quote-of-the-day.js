@@ -13,7 +13,7 @@ Module.register('MMM-quote-of-the-day', {
         console.log("Starting module: " + this.name);
 
         // init the node helper
-        let quoteApiURL = "http://api.forismatic.com/api/1.0/?method=getQuote&format=json";
+        let quoteApiURL = "https://quoteslate.vercel.app/api/quotes/random";
         let payload = {
             url: quoteApiURL,
             language: this.config.language
@@ -36,9 +36,9 @@ Module.register('MMM-quote-of-the-day', {
         quoteTextDiv.className = "normal";
         quoteAuthorDiv.className = "small dimmed";
 
-        if (this.result.quoteText){
-            quoteTextDiv.innerHTML = this.result.quoteText;
-            quoteAuthorDiv.innerHTML = this.result.quoteAuthor;
+        if (this.result.quote){
+            quoteTextDiv.innerHTML = this.result.quote;
+            quoteAuthorDiv.innerHTML = this.result.author;
         }else{
             quoteTextDiv.innerHTML = "Loading";
             quoteAuthorDiv.innerHTML = "";
