@@ -2,7 +2,7 @@
 
 Module to get a random quote from various authorship.
 
-This module is based on the [QuoteSlate](https://github.com/Musheer360/QuoteSlate) API.
+This module is based on the [Quotes API](https://github.com/well300/quotes-api).
 Quotes are only available in English but they can be translated on the fly in the language of your choice. The translation is based on the Google API.
 The quote is renewed following a configurable update interval.
 
